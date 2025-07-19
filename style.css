@@ -1,0 +1,236 @@
+/* عام */
+body {
+  font-family: "Tahoma", sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* الهيدر */
+header {
+  background: #1565c0;
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+}
+
+header .logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #90caf9;
+}
+
+/* البانر */
+.hero {
+  background: linear-gradient(to right, #2196f3, #42a5f5);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 25px;
+}
+
+.hero .btn {
+  background: white;
+  color: #1565c0;
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #1565c0;
+  color: white;
+}
+
+/* قسم الدورات */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.features .box {
+  background: white;
+  padding: 25px 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.features .box:hover {
+  background-color: #e3f2fd;
+  box-shadow: 0 6px 15px rgba(33, 150, 243, 0.3);
+}
+
+.features .box h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* مميزات الأكاديمية */
+#features {
+  background: white;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
+}
+
+#features h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #1565c0;
+}
+
+#features ul {
+  list-style: inside disc;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* قسم نموذج شرح */
+.demo {
+  background-color: #e3f2fd;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 40px auto 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(33, 150, 243, 0.2);
+  text-align: center;
+  font-size: 1.15rem;
+  color: #0d47a1;
+  line-height: 1.6;
+}
+
+.demo h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.demo p {
+  margin: 12px 0;
+}
+
+.demo a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.demo a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+/* قسم فيديوهات تجربة الشرح */
+.video-demos {
+  background: #f0f4ff;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.15);
+  text-align: center;
+  color: #0d47a1;
+}
+
+.video-demos h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.video-demos p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+
+/* أزرار الفيديو */
+.btn-video {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: #1565c0;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-video:hover {
+  background-color: #0d47a1;
+}
+
+/* حاوية الفيديوهات */
+.video-demos > div:last-child {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.video-demos iframe {
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  max-width: 100%;
+}
+
+/* الفوتر */
+footer {
+  background: #eeeeee;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+footer a {
+  color: #1565c0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #0d47a1;
+}
