@@ -1,172 +1,260 @@
+/* Reset and base */
 * {
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background-color: #f7f9fc;
-  color: #333;
+  background: #e9f0fc; /* خلفية ناعمة شبيهة للصورة */
+  color: #222;
   line-height: 1.6;
+  direction: rtl;
 }
 
-header {
-  background-color: #004080;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-.logo {
-  width: 80px;
-  margin-bottom: 10px;
-}
-
-header h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
+a {
+  color: inherit;
   text-decoration: none;
-  font-weight: bold;
 }
 
-nav a:hover {
+a:hover {
+  color: #1557bf;
   text-decoration: underline;
 }
 
-.hero {
-  background: linear-gradient(to right, #007bff, #00bfff);
+/* الهيدر */
+header {
+  background-color: #1557bf; /* أزرق غامق */
   color: white;
+  padding: 25px 20px;
   text-align: center;
-  padding: 60px 20px;
+  box-shadow: 0 4px 10px rgb(21 87 191 / 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  width: 90px;
+  margin-bottom: 12px;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 18px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: rgba(255 255 255 / 0.25);
+}
+
+/* البانر */
+.hero {
+  background: linear-gradient(135deg, #3a84ff 0%, #7aafff 100%);
+  color: white;
+  padding: 80px 20px 60px;
+  text-align: center;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 6px 25px rgb(58 132 255 / 0.5);
 }
 
 .hero h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgb(0 0 0 / 0.25);
 }
 
 .hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 28px;
+  opacity: 0.85;
 }
 
-.btn {
+.hero .btn {
   background-color: white;
-  color: #007bff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
+  color: #1557bf;
+  padding: 15px 40px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 40px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.15);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.btn:hover {
-  background-color: #e6e6e6;
+.hero .btn:hover {
+  background-color: #1348a3;
+  color: #fff;
+  box-shadow: 0 6px 25px rgb(19 72 163 / 0.8);
+  transform: scale(1.05);
 }
 
+/* قسم المواد */
 .features {
-  padding: 50px 20px;
-  background-color: #ffffff;
-  text-align: center;
+  max-width: 1100px;
+  margin: 60px auto 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
 }
 
 .features h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
-
-.box {
-  background-color: #f0f8ff;
-  border: 1px solid #cce;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 400px;
-}
-
-.about-section {
-  padding: 50px 20px;
-  background-color: #ffffff;
+  grid-column: 1/-1;
+  font-size: 2.7rem;
+  color: #1557bf;
+  font-weight: 700;
+  margin-bottom: 25px;
   text-align: center;
+  letter-spacing: 1.1px;
+}
+
+.features .box {
+  background-color: white;
+  border-radius: 18px;
+  padding: 25px 20px;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  text-align: center;
+}
+
+.features .box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 28px rgb(21 87 191 / 0.3);
+}
+
+.features .box h3 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+  color: #1557bf;
+}
+
+.features .box p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* قسم من نحن */
+.about-section {
+  background: white;
+  max-width: 900px;
+  margin: 70px auto 90px;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgb(0 0 0 / 0.07);
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
 }
 
 .about-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  font-size: 2.4rem;
+  color: #1557bf;
+  font-weight: 700;
 }
 
-.about-section p {
-  max-width: 700px;
-  margin: 0 auto 15px;
-  font-size: 17px;
-  color: #444;
-}
-
+/* قسم الفيديوهات */
 .video-demos {
-  padding: 50px 20px;
-  background-color: #eef3fa;
+  max-width: 1100px;
+  margin: 0 auto 90px;
+  background: white;
+  padding: 50px 30px;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgb(0 0 0 / 0.08);
   text-align: center;
+  color: #1557bf;
 }
 
 .video-demos h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.video-demos p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: #444;
 }
 
 .btn-video-container {
-  margin: 20px 0;
+  margin-bottom: 30px;
 }
 
 .btn-video {
-  display: inline-block;
-  background-color: #004080;
+  background-color: #1557bf;
   color: white;
-  padding: 10px 20px;
-  margin: 5px;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 12px 30px;
+  margin: 8px 12px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .btn-video:hover {
-  background-color: #0066cc;
+  background-color: #0e3a80;
+  text-decoration: none;
 }
 
 .video-iframes {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  gap: 22px;
 }
 
 .video-iframes iframe {
-  width: 360px;
-  height: 215px;
+  border-radius: 20px;
+  width: 400px;
+  height: 230px;
   border: none;
-  border-radius: 10px;
+  box-shadow: 0 8px 22px rgb(0 0 0 / 0.18);
+  transition: transform 0.3s ease;
 }
 
-.footer-bottom {
-  background-color: hsl(0, 0%, 100%);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 15px;
+.video-iframes iframe:hover {
+  transform: scale(1.05);
 }
 
+/* الفوتر */
 .footer-bottom {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  background-color: #1557bf;
+  color: #dbe4ff;
   text-align: center;
-  padding: 30px 20px;
+  padding: 35px 20px;
   font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 0 0 25px 25px;
+  box-shadow: 0 -5px 15px rgb(21 87 191 / 0.5);
+}
+
+.footer-bottom a {
+  color: #dbe4ff;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.footer-bottom a:hover {
+  color: #f0f4ff;
 }
