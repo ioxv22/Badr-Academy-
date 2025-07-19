@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Badr Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,21 +14,23 @@
     <h1>أكاديمية بدر التعليمية</h1>
     <nav>
       <a href="#home">الرئيسية</a>
-      <a href="#courses">الدورات</a>
+      <a href="#courses">المواد</a>
+      <a href="#demo-videos">الفيديوهات</a>
       <a href="#about">من نحن</a>
-      <a href="https://t.me/badr_physics" target="_blank" rel="noopener noreferrer">احجز الحصة معنا</a>
+      <a href="https://t.me/badr_physics" target="_blank">احجز الحصة</a>
     </nav>
   </header>
 
   <!-- البانر -->
   <section class="hero">
     <h2>تعلم المواد العلمية من الصف 9 إلى 12</h2>
-    <p>فيزياء، كيمياء، رياضيات، تحفيظ قرآن و تاسيس اللغه الانجليزيه مع معلم محترف</p>
-    <a href="https://t.me/badr_physics" class="btn">راسلنا على تيليجرام</a>
+    <p>فيزياء، كيمياء، رياضيات، مع معلم محترف</p>
+    <a href="https://t.me/badr_physics" class="btn" target="_blank">راسلنا على تيليجرام</a>
   </section>
 
-  <!-- قسم الدورات -->
+  <!-- المواد -->
   <section class="features" id="courses">
+    <h2>مواد الأكاديمية</h2>
     <div class="box">
       <h3>📘 فيزياء</h3>
       <p>شرح مفصل مع أمثلة وتمارين لطلاب الصفوف العليا.</p>
@@ -40,61 +43,42 @@
       <h3>📐 رياضيات</h3>
       <p>أساسيات قوية + تدريب مكثف على المسائل.</p>
     </div>
-    <div class="box">
-      <h3>📖 تحفيظ قرآن</h3>
-      <p>تلاوة، حفظ، ومراجعة مع متابعة مستمرة.</p>
-    </div>
-    <div class="box">
-      <h3>🧬 أحياء</h3>
-      <p>مفاهيم علمية مبسطة ودروس تطبيقية.</p>
-    </div>
-    <div class="box">
-      <h3>📝 اللغة الإنجليزية</h3>
-      <p>تطوير مهارات اللغة ومصطلحات علمية.</p>
-    </div>
   </section>
 
-  <!-- مميزات الأكاديمية -->
-  <section class="features" id="features">
-    <h2>مميزات الأكاديمية</h2>
-    <ul>
-      <li>تعليم تفاعلي وممتع</li>
-      <li>معلمون ذوو خبرة وكفاءة عالية</li>
-      <li>دروس خصوصية حسب الطلب</li>
-      <li>مواد تعليمية محدثة باستمرار</li>
-    </ul>
+  <!-- قسم من نحن -->
+  <section id="about" class="about-section">
+    <h2>من نحن</h2>
+    <p>
+      أكاديمية بدر التعليمية هي منصة إلكترونية تهدف إلى تبسيط المواد العلمية لطلاب المرحلة الثانوية (الصفوف 9 إلى 12)،
+      باستخدام شرح تفاعلي وباللغتين العربية والإنجليزية. يقدم المحتوى الأستاذ عبد الرحمن بدر بخبرة عالية وتميز أكاديمي.
+    </p>
+    <p>
+      نركز على فهم عميق للمفاهيم، تدريب مكثف على الامتحانات، وتهيئة الطلاب لتحقيق أفضل النتائج.
+    </p>
   </section>
 
-  <!-- من نحن -->
-  <section class="demo" id="about">
-    <p>تحت إشراف الأستاذ عبد الرحمن</p>
-    <p>برمجة وتطوير بواسطة <a href="https://t.me/iivoz" target="_blank">@iivoz</a> على تيليجرام</p>
-    <p>شاهد المزيد على اليوتيوب: <a href="https://www.youtube.com/@abdelrahmanbadr2024" target="_blank">قناة الأستاذ عبد الرحمن</a></p>
-  </section>
-
-  <!-- قسم فيديوهات تجربة الشرح -->
-  <section class="video-demos" id="demo-videos" style="padding: 40px 20px; text-align: center; background: #f0f4ff;">
+  <!-- قسم فيديوهات -->
+  <section class="video-demos" id="demo-videos">
     <h2>تجربة الشرح من قناة الأستاذ عبد الرحمن بدر</h2>
     <p>شاهد فيديوهات تعليمية مختارة من القناة:</p>
     
-    <!-- أزرار فيديو -->
-    <div style="margin-bottom: 30px;">
-      <a href="https://youtu.be/lfRDLdCOOFs?si=9Xu-Z1YLDEmMbzLS" target="_blank" class="btn-video" style="display:inline-block; margin:10px; padding: 12px 20px; background:#1565c0; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">شرح فيزياء بالانجليزي 1</a>
-      <a href="https://youtu.be/TKQebxD_ANA?si=yjaT_Zo55Nqlvv5r" target="_blank" class="btn-video" style="display:inline-block; margin:10px; padding: 12px 20px; background:#1565c0; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">شرح فيزياء بلعربي 1</a>
+    <div class="btn-video-container">
+      <a href="https://www.youtube.com/watch?v=TKQebxD_ANA" target="_blank" class="btn-video">شرح فيزياء بالإنجليزي</a>
+      <a href="https://www.youtube.com/watch?v=ORanycmOZvM" target="_blank" class="btn-video">شرح فيزياء بالعربي</a>
     </div>
 
-    <!-- تضمين فيديوهات -->
-    <div style="display:flex; justify-content:center; flex-wrap: wrap; gap: 20px;">
-      <iframe width="320" height="180" src="https://youtu.be/lfRDLdCOOFs?si=9Xu-Z1YLDEmMbzLS" title="شرح فيزياء بالانجليزي 1" frameborder="0" allowfullscreen></iframe>
-      <iframe width="320" height="180" src="https://youtu.be/TKQebxD_ANA?si=yjaT_Zo55Nqlvv5r" title="شرح فيزياء بلعربي 1" frameborder="0" allowfullscreen></iframe>
+    <div class="video-iframes">
+      <iframe src="https://www.youtube.com/embed/TKQebxD_ANA" title="شرح فيزياء بالانجليزي 1" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ORanycmOZvM" title="شرح فيزياء بالعربي 1" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
-  <!-- فوتر -->
-  <footer id="contact">
+  <!-- الفوتر -->
+  <footer class="footer-bottom">
     <p>© 2025 Badr Academy. جميع الحقوق محفوظة.</p>
-    <p>📞 +201002507441 | 👨‍🏫 Physics Teacher</p>
-    <p>📱 احجز الحصة معنا على تيليجرام: <a href="https://t.me/badr_physics" target="_blank">اضغط هنا</a></p>
+    <p>تحت إشراف الأستاذ عبد الرحمن بدر</p>
+    <p>برمجة وتطوير بواسطة <a href="https://t.me/iivoz" target="_blank">@iivoz</a> على تيليجرام</p>
+    <p>شاهد المزيد على <a href="https://www.youtube.com/@abdelrahmanbadr2024" target="_blank">قناة الأستاذ عبد الرحمن</a></p>
   </footer>
 
 </body>
