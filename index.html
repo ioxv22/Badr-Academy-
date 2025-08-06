@@ -5,20 +5,34 @@
   <title>Badr Academy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
   <!-- الهيدر -->
   <header id="home">
-    <img src="https://i.ibb.co/Mxdg5RjN/image.png" alt="Badr Academy Logo" class="logo" />
-    <h1>أكاديمية بدر التعليمية</h1>
-    <nav>
-      <a href="#home">الرئيسية</a>
-      <a href="#courses">المواد</a>
-      <a href="#demo-videos">الفيديوهات</a>
-      <a href="#about">من نحن</a>
-      <a href="https://wh.ms/201002507441" target="_blank">احجز الحصة</a>
-    </nav>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="https://i.ibb.co/Mxdg5RjN/image.png" alt="Badr Academy Logo" class="logo" />
+        <h1>أكاديمية بدر التعليمية</h1>
+      </div>
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="nav-links">
+          <a href="#home">الرئيسية</a>
+          <a href="#courses">المواد</a>
+          <a href="#demo-videos">الفيديوهات</a>
+          <a href="#payment">الدفع</a>
+          <a href="#about">من نحن</a>
+          <a href="https://wh.ms/201002507441" target="_blank" rel="noopener" class="cta-button">احجز الحصة</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <!-- البانر -->
@@ -46,6 +60,83 @@
     <div class="box">
       <h3>🔬 علوم</h3>
       <p>مبادئ العلوم العامة مع تجارب تطبيقية مبسطة.</p>
+    </div>
+  </section>
+
+  <!-- قسم الدفع -->
+  <section id="payment" class="payment-section">
+    <h2>خيارات الدفع</h2>
+    <p>يمكنك الدفع بإحدى الطرق التالية للاشتراك في دوراتنا التعليمية</p>
+    
+    <div class="payment-options">
+      <div class="payment-option">
+        <div class="payment-icon">🏦</div>
+        <h3>تحويل بنكي</h3>
+        <p>حوّل المبلغ إلى حسابنا البنكي وأرفق إيصال الدفع</p>
+        <button class="payment-btn bank-transfer-btn" id="show-bank-details">تفاصيل الحساب</button>
+      </div>
+    </div>
+    
+    <!-- تفاصيل الحساب البنكي -->
+    <div class="bank-details" id="bank-details">
+      <h3>تفاصيل الحساب البنكي</h3>
+      <div class="bank-info">
+        <p><strong>Bank Name:</strong> Abu Dhabi Commercial Bank PJSC</p>
+        <p><strong>Account Title:</strong> MOHAMED SABRI MOHAMED SOLIMAM</p>
+        <p><strong>Account Number:</strong> 12515142820001</p>
+        <p><strong>IBAN:</strong> AE050030012515142820001</p>
+        <p><strong>Currency:</strong> AED</p>
+        <p><strong>Branch:</strong> IBD-AJMAN BRANCH</p>
+        <p><strong>Swift Code:</strong> ADCBAEAA</p>
+      </div>
+      <button class="payment-btn confirm-transfer-btn" id="confirm-transfer">تأكيد التحويل</button>
+    </div>
+    
+    <!-- نموذج تأكيد الدفع -->
+    <div class="payment-confirmation" id="payment-confirmation">
+      <h3>تأكيد الدفع</h3>
+      <form id="payment-form" class="payment-form">
+        <div class="form-group">
+          <label for="student-name">الاسم الكامل</label>
+          <input type="text" id="student-name" name="student-name" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="student-email">البريد الإلكتروني</label>
+          <input type="email" id="student-email" name="student-email" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="student-phone">رقم الهاتف (واتساب)</label>
+          <input type="tel" id="student-phone" name="student-phone" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="payment-amount">المبلغ المدفوع</label>
+          <input type="number" id="payment-amount" name="payment-amount" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="payment-proof">إرفاق دليل الدفع (صورة الإيصال)</label>
+          <input type="file" id="payment-proof" name="payment-proof" accept="image/*,.pdf">
+          <p class="file-hint">يمكنك رفع صورة أو ملف PDF (الحد الأقصى 5 ميجابايت)</p>
+        </div>
+        
+        <div class="form-group notification-options">
+          <label>طريقة استلام تأكيد الدفع:</label>
+          <div class="radio-group">
+            <div class="radio-option">
+              <input type="radio" id="whatsapp-notification" name="notification-method" value="whatsapp" checked>
+              <label for="whatsapp-notification">إرسال الإيصال على رقم الواتساب</label>
+            </div>
+
+        <div class="form-group">
+          <label for="payment-notes">ملاحظات إضافية</label>
+          <textarea id="payment-notes" name="payment-notes" rows="3"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-payment-btn">تأكيد الدفع</button>
+      </form>
     </div>
   </section>
 
