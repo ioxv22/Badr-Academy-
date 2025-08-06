@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           const message = `
 🧾 تم استلام عملية دفع جديدة
-
+( لا تنسى ترسل الايصال بعد التأكيد )
 👤 الاسم: ${studentName}
 📱 رقم الطالب: ${formattedPhone}
 💵 المبلغ: ${amount}
